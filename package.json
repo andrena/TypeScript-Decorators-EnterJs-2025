@@ -1,0 +1,42 @@
+{
+  "name": "TypeScript Decorators",
+  "version": "EnterJs-2025",
+  "description": "Examples and slides from the talk \"TypeScript-Funktionen dekorieren - Nicht nur zu Weihnachten!\" from Marco Sieben on the EnterJs 2025",
+  "homepage": "https://www.andrena.de",
+  "scripts": {
+  },
+  "author": {
+    "name": "Marco Sieben",
+    "email": "marco.sieben@andrena.de",
+    "web": "https://www.andrena.de/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andrena/TypeScript-Decorators-EnterJs-2025.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/jest-when": "^3.5.5",
+    "jest": "^29.7.0",
+    "jest-when": "^3.6.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+      "node_modules/variables/.+\\.(j|t)sx?$": "ts-jest"
+    },
+    "setupFilesAfterEnv": [
+      "./setupJest.ts"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!variables/.*)"
+    ]
+  }
+}
